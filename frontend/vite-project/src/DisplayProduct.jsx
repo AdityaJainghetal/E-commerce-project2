@@ -10,10 +10,10 @@ function DisplayProduct() {
     try {
       let api = "http://localhost:8000/products/productdisplay";
       const response = await axios.get(api);
-    
+      console.log(response.data)
 
-      if (response.data.products && response.data.products.length > 0) {
-        setProducts(response.data.products);
+      if (response.data && response.data.length > 0) {
+        setProducts(response.data);
       }
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -25,26 +25,12 @@ function DisplayProduct() {
 
   const proAns = products.map((item) => (
     <>
-      {/* <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-        <div className="product-box">
-          <i>
-            <img
-              src={`http://localhost:8080/${item.defaultImage}`}
-              style={{ height: "200px" }}
-            />
-          </i>
-          <h3>{item.productname}</h3>
-          <span>{item.productprice}</span>
-          <br />
-          <Button variant="success">Add to Cart</Button>
-        </div>
-      </div> */}
-
+    
+    {console.log(item.defaultImage)} 
 
 
 <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" 
-     
+      <Card.Img variant="top"
     
         src={`http://localhost:8000/${item.defaultImage}`}
         style={{ height: "200px" }}/>

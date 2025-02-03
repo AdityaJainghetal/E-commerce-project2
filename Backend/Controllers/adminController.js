@@ -31,7 +31,7 @@ const adminLogin = async (req, res)=>{
 const productSave=async(req, res)=>{
     console.log(req.files);
     const imageUrls = req.files.map(file => file.path);
-       const Product= await ProductModel.create({
+   const Product= await ProductModel.create({
         productname:req.body.productname,
         productbrand:req.body.productbrand,
         productcategory:req.body.productcategory,
@@ -56,4 +56,4 @@ const productSave=async(req, res)=>{
 module.exports= {
     adminLogin,
     productSave
-}
+} 

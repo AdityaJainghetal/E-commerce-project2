@@ -15,7 +15,7 @@ const AdminDashboard=()=>{
           <div id="mainData">
               <div id="mainLeftMenu"> 
           
-                 <Link to="admin/uploadproduct">Upload Product </Link>
+                 <Link to="uploadproduct">Upload Product </Link>
               </div>
               <div id="mainRightData"> 
                  

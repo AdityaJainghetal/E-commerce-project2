@@ -6,27 +6,27 @@ const path =require('path')
 const AdminController = require("../Controllers/adminController");
 
 const storage = multer.diskStorage({
-    destination:(req,files ,cb)=>{
-        cb(null,"uploads/")
+    destination: (req, file, cb) => {
+      cb(null, 'uploads/'); // Set the folder where files will be saved
     },
-    filename: (req,file,cb)=>{
-        cb(null, `${Date.now()}-${file.originalname}`)
+    filename: (req, file, cb) => {
+      cb(null, `${Date.now()}-${file.originalname}`); // Save file with a unique name
     },
-})
+  });
 
-
-const fileFilter= (req,file,cb)=>{
-    const allowedFileType= /jpeg|jpg|png|pdf/;
-    const extname = allowedFileType.test(path.extname(file.originalname).toLowerCase());
-    const mimetype = allowedFileType.test(file.mimetype)
-
-    if(extname && mimetype){
-        cb(null,true);
-    }else{
-        cb(new Error('Invalid file type. Only JPEG,PNG,and PDF are allowed'))
+  // File filter for allowed extensions (optional)
+  const fileFilter = (req, file, cb) => {
+    const allowedFileTypes = /jpeg|jpg|png|pdf/;
+    const extname = allowedFileTypes.test(path.extname(file.originalname).toLowerCase());
+    const mimetype = allowedFileTypes.test(file.mimetype);
+  
+    if (extname && mimetype) {
+      cb(null, true);
+    } else {
+      cb(new Error('Invalid file type. Only JPEG, PNG, and PDF are allowed.'));
     }
-}
-
+  };
+  
 const upload = multer({
     storage:storage,
     fileFilter:fileFilter,
@@ -36,7 +36,7 @@ const upload = multer({
 
 
 route.post("/adminlogin",AdminController.adminLogin)
-route.post("/productsave", upload.array('file', 10) ,AdminController.productSave);
+route.post("/productsave", upload.array('files', 10) ,AdminController.productSave);
 
 module.exports = route
 
