@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#adminHeader
+{
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(41, 78, 123);
+    text-align: center;
+    color: white;
+}
+
+
+
+#adminFooter
+{
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(27, 32, 43);
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+}
+
+
+
+#adminForm
+{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border: 2px solid black;
+    width: 50%;
+    margin-top: 50px;
+    padding: 100px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: whitesmoke;
+    
+}
+
+#adminData
+{
+    
+    padding-bottom: 50px;
+}
+
+#namedisplay
+{
+    padding: 10px;
+    background-color: lightcyan;
+    color: rgb(187, 83, 83);
+    text-align: center;
+}
+
+#mainData
+{
+    display: flex;
+}
+#mainLeftMenu
+{
+    width: 20%;
+    padding: 20px;
+}
+#mainRightData
+{
+    width: 80%;
+    padding: 20px;
+}
