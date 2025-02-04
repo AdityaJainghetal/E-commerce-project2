@@ -32,6 +32,8 @@ const ViewProduct = () => {
 
     return (
     <>
+   
+
      <Container style={{backgroundColor:"whitesmoke", border:"2px solid black", borderRadius:"10px", padding:"10px", textAlign:"center"}}>
        
        <Row className="justify-content-left">

@@ -10,6 +10,10 @@ import AdminLogin from './Admin/AdminLogin'
 import AdminDashboard from './Admin/AdminDasboard'
 import UploadProduct from './Admin/UploadProduct'
 import ViewProduct from './ViewProduct'
+import Cart from './Cart'
+import Checkout from './Checkout'
+import Signup from './Regisration'
+import Login from './Login'
 const App = () => {
   return (
     <>
@@ -21,11 +25,17 @@ const App = () => {
         <Route path='mens' element={<Mens/>}/>
         <Route path='womens' element={<Womens/>}/>
         <Route path="viewProduct/:id" element={<ViewProduct />}/>  
-
-
+        <Route path="regsitation" element={<Signup/>}/>
+        <Route path="login" element={<Login/>}/>
         </Route>
 
+      <Route>
 
+      <Route path="cart" element={<Cart/>}/>
+      <Route path='checkout' element={<Checkout/>}/>
+      <Route path="regsitation" element={<Signup/>}/>
+        <Route path="login" element={<Login/>}/>
+      </Route>
 
     </Routes>
 
