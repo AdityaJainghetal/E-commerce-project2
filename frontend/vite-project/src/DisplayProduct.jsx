@@ -3,12 +3,17 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from 'react-bootstrap/Card';
 import {useNavigate} from "react-router-dom"
-
-
+import {useDispatch} from "react-redux";
+import { addtoCart } from "./CardSlice";
 
 function DisplayProduct() {
   const [products, setProducts] = useState([]);
-const navigate = useNavigate()
+  
+
+  const dispatch = useDispatch()
+
+
+  const navigate = useNavigate()
   const loadData = async () => {
     try {
       let api = "http://localhost:8000/products/productdisplay";
@@ -42,7 +47,7 @@ const navigate = useNavigate()
     <>
 
 
-<Card style={{ width: '18rem' }}>
+<Card style={{ width: '18rem' , backgroundColor:"skyblue",marginLeft:"50px" , cursor:"pointer"}}>
       <Card.Img variant="top"
      onClick={()=>{proDisplay(item._id)}}
         src={`http://localhost:8000/${item.defaultImage}`}
@@ -53,10 +58,14 @@ const navigate = useNavigate()
         <Card.Text>
         {item.productprice}
         </Card.Text>
-        <Button variant="primary">Add to Cart</Button>
+        <Button variant="primary"
+        onClick={()=>{dispatch(addtoCart({id:item._id,name:item.productname,brand:item.productbrand, category:item.productcategory, price:item.productprice, image:item.defaultImage}))}}
+        
+        >Add to Cart</Button>
       </Card.Body>
     </Card>
     </>
+    
   ));
 
   return (
