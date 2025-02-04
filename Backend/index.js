@@ -6,7 +6,7 @@ const adminRoute= require("./Route/AdminRoute");
 const AllProductRoute = require("./Route/ProductRoute")
 const cors = require("cors");
 app.use(cors());
-app.use("uploads", express.static("uploads"))
+app.use("/uploads", express.static("uploads"));
 mongoose.connect("mongodb://localhost:27017/Adityajain").then(()=>{
     console.log("DB connected !!!");
 })

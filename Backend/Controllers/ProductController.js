@@ -9,6 +9,16 @@ const productDisplay = async(req,res)=>{
     }
 }
 
+
+// const prodctDataShow = async()=>{
+//     const Product = await ProductModule.findById(req.body.id);
+//     res.status(200).send(Product);
+// }
+
+
+
+
+
 module.exports={
     productDisplay
 }

@@ -9,6 +9,7 @@ import AdminHome from './Admin/AdminHome'
 import AdminLogin from './Admin/AdminLogin'
 import AdminDashboard from './Admin/AdminDasboard'
 import UploadProduct from './Admin/UploadProduct'
+import ViewProduct from './ViewProduct'
 const App = () => {
   return (
     <>
@@ -19,7 +20,7 @@ const App = () => {
         <Route path='product' element={<Product/>}/>
         <Route path='mens' element={<Mens/>}/>
         <Route path='womens' element={<Womens/>}/>
-        
+        <Route path="viewProduct/:id" element={<ViewProduct />}/>  
 
 
         </Route>
@@ -33,6 +34,7 @@ const App = () => {
       <Route index element={<AdminLogin/>}/>
       <Route path='adminDashboard' element={<AdminDashboard/>}/>
       <Route path='uploadproduct' element={<UploadProduct/>}/>
+      
 
       </Route>
 

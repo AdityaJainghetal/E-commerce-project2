@@ -2,10 +2,13 @@ import { Container, Row, Button } from "react-bootstrap";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from 'react-bootstrap/Card';
+import {useNavigate} from "react-router-dom"
+
+
 
 function DisplayProduct() {
   const [products, setProducts] = useState([]);
-
+const navigate = useNavigate()
   const loadData = async () => {
     try {
       let api = "http://localhost:8000/products/productdisplay";
@@ -23,18 +26,28 @@ function DisplayProduct() {
     loadData();
   }, []);
 
+
+  const proDisplay=(id)=>{
+    navigate(`/viewProduct/${id}`)
+ }
+
+
+
+
+
+
+
+
   const proAns = products.map((item) => (
     <>
-    
-    {console.log(item.defaultImage)} 
 
 
 <Card style={{ width: '18rem' }}>
       <Card.Img variant="top"
-    
+     onClick={()=>{proDisplay(item._id)}}
         src={`http://localhost:8000/${item.defaultImage}`}
         style={{ height: "200px" }}/>
-   
+      
       <Card.Body>
         <Card.Title>{item.productname}</Card.Title>
         <Card.Text>
