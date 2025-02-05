@@ -5,8 +5,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <MDBFooter className='text-center text-lg-start text-muted' style={{ backgroundColor: "darkblue", color: "white", fontSize: "18px", padding:"20px" }}>
-      <section style={{ color: "white" }}>
+    <>
+
+    <MDBFooter className='text-center text-lg-start text-muted' style={{ backgroundColor: "darkblue", color: "white", fontSize: "18px", padding:"20px" ,height:"300px"}}>
+      <section style={{ color: "white"}}>
         <MDBContainer className='text-center text-md-start mt-5'>
           <MDBRow className='mt-3'>
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
@@ -72,14 +74,16 @@ const Footer = () => {
           </MDBRow>
         </MDBContainer>
       </section>
-
+{/* 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
         © {currentYear} Copyright:
         <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
           MDBootstrap.com
         </a>
-      </div>
+      </div> */}
     </MDBFooter>
+  
+    </>
   );
 }
 

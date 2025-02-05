@@ -11,8 +11,22 @@ import img4 from "./assets/img4.jpg"
 import img5 from "./assets/img5.jpg"
 import img7 from "./assets/img7.jpg"
 import img9 from "./assets/img9.jpg"
+import { useNavigate } from 'react-router-dom';
 
 const Banner = () => {
+  const navigate=  useNavigate()
+
+  const handleInput=()=>{
+      navigate("/mens")
+  }
+
+
+  const handleInput2=()=>{
+    navigate("/womens")
+}
+
+
+
   return (
     <>
      <Carousel>
@@ -41,7 +55,7 @@ const Banner = () => {
     <Container>
       <Row style={{display:"flex"}}>
         <Col xs={6} md={3}>
-          <Image src={img4} roundedCircle  style={{height:"230px", width:"50%"}}  />
+          <Image src={img4} roundedCircle  style={{height:"230px", width:"50%", cursor:"pointer"}} onClick={handleInput}  />
  
           <h3>Mens</h3>
         </Col>
@@ -50,7 +64,7 @@ const Banner = () => {
           <h3>Kids</h3>
         </Col>
         <Col xs={6} md={3}>
-          <Image src={img7} roundedCircle  style={{height:"230px", width:"50%"}} />
+          <Image src={img7} roundedCircle  style={{height:"230px", width:"50%", cursor:"pointer"}} onClick={handleInput2} />
           <h3>Womens</h3>
         </Col>
         <Col xs={6} md={3}>

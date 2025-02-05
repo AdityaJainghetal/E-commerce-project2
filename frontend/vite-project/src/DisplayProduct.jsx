@@ -47,7 +47,7 @@ function DisplayProduct() {
     <>
 
 
-<Card style={{ width: '18rem' , backgroundColor:"skyblue",marginLeft:"50px" , cursor:"pointer"}}>
+<Card style={{ width: '18rem' , backgroundColor:"skyblue" , cursor:"pointer", margin:"auto", marginTop:"50px"}}>
       <Card.Img variant="top"
      onClick={()=>{proDisplay(item._id)}}
         src={`http://localhost:8000/${item.defaultImage}`}
