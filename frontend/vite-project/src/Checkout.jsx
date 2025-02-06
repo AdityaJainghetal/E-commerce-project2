@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 import { Button } from "react-bootstrap";
 import Card from 'react-bootstrap/Card';
-
+import Topmenu from './Topmenu'
 const CheckOut = () => {
     const [mydata, setMydata] = useState({});
     const navigate = useNavigate();
@@ -46,7 +46,7 @@ const CheckOut = () => {
                     await axios.post(verifyURL, response);
                     message.success("Payment successful!");
                 } catch (error) {
-                    message.error("Payment verification failed.");
+                    // message.error("Payment verification failed.");
                     console.error(error);
                 }
             },
@@ -87,9 +87,12 @@ const CheckOut = () => {
     });
 
     return (
-        <div style={{ margin: "auto", width: "50%", marginTop: "100px" }}>
-            <Card style={{ margin: "auto", width: "100%", backgroundColor: "silver" }}>
-                <Card.Img style={{width:"50%", height:"50%",paddingLeft:"300px"}} variant="top" src={`http://localhost:8000/${myimg}`} />
+        <>
+            <Topmenu/>
+      
+        <div id="checkout">
+            <Card className="checkoutbtn">
+                <Card.Img style={{width:"50%", height:"50%", padding:"auto"}} variant="top" src={`http://localhost:8000/${myimg}`} />
                 <Card.Body>
                     <Card.Title>User CheckOut</Card.Title>
                     <Card.Text>
@@ -105,6 +108,7 @@ const CheckOut = () => {
                 </Card.Body>
             </Card>
         </div>
+        </>
     );
 };
 

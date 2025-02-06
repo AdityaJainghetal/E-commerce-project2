@@ -52,14 +52,18 @@
 #namedisplay
 {
     padding: 10px;
-    background-color: lightcyan;
-    color: rgb(187, 83, 83);
+    background-color: rgb(55, 43, 140);
+    color: white;
     text-align: center;
 }
 
 #mainData
 {
     display: flex;
+    background-color: whitesmoke;
+    width: 20%;
+    height: 100vh;
+    
 }
 #mainLeftMenu
 {
@@ -70,4 +74,25 @@
 {
     width: 80%;
     padding: 20px;
+}
+
+.cart{
+    font-size: 20px;
+    
+    font-weight: 700;
+}
+
+#checkout{
+    margin: "auto";
+    width: 50%;
+    /* height: 50%; */
+    margin-left: 400px;
+    margin-top: 50px;
+   
+}
+.checkoutbtn{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    align-items: center;
+    height: 500px;
 }

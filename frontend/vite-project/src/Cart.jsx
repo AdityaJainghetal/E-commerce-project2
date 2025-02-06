@@ -59,8 +59,8 @@ const Cart = () => {
   
     <div>
       <div style={{display: 'flex', justifyContent: 'space-between', padding: '10px'}}>
-         <div><FaShoppingCart /> Your Cart  </div>
-         <div><FaMoneyCheck /> Total: {totalAmount}</div>
+         <div ><FaShoppingCart /> Your Cart  </div>
+         <div style={{border:"2px solid black", padding:"5px", borderRadius:"10px"}}><FaMoneyCheck /> Total: {totalAmount}</div>
          <div>
           <Button variant="primary" 
           onClick={mynavigation} > <FaMoneyCheck /> Checkout </Button></div>
@@ -69,24 +69,24 @@ const Cart = () => {
       <div style={{height:"50vh", overflowY:"scroll"}}>
         <Table striped bordered hover>
           <thead style={{position: 'sticky', top: 0, backgroundColor: 'white', zIndex: 1}}>
-            <tr>
-              <th>#</th>
+            <tr className='cart'>
+              <th>Images</th>
               <th>Product</th>
               <th> Price </th>
               <th>Quantity</th>
               <th>Total Amount</th>
-              <th> </th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody >
 
            {ans}
 
-           <th>Total Price</th>
+           <th  style={{fontWeight:"700"}}>Total Price</th>
               <th></th>
               <th> </th>
               <th></th>
-              <th> {totalAmount} </th>
+              <th style={{fontWeight:"700"}}> {totalAmount} </th>
               <th> </th>
           </tbody>
         </Table>

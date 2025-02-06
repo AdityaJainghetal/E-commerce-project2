@@ -16,7 +16,8 @@ function Mens() {
   const navigate = useNavigate()
   const loadData = async () => {
     try {
-      let api = "http://localhost:8000/products/productdisplay?productbrand=Mens"
+      let api = "http://localhost:8000/products/productdisplay?productbrand=Mens";
+
       const response = await axios.get(api);
       console.log(response.data)
 
@@ -82,7 +83,7 @@ function Mens() {
                   <div className="col-md-12">
                     <div className="title">
                       <h2>
-                        our <strong className="black">products</strong>
+                        Our <strong className="black">Products</strong>
                       </h2>
                     
                     </div>

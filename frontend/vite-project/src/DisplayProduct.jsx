@@ -61,7 +61,7 @@ function DisplayProduct() {
         <Button variant="primary"
         onClick={()=>{dispatch(addtoCart({id:item._id,name:item.productname,brand:item.productbrand, category:item.productcategory, price:item.productprice, image:item.defaultImage,qnty:1}))}}
         
-        >Add to Cart</Button>
+        >🛒 Add to Cart</Button>
       </Card.Body>
     </Card>
     </>
