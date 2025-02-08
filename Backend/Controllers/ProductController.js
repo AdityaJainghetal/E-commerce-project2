@@ -3,7 +3,7 @@ const ProductModule =require("../Module/productModule");
 const AllDisplay = async(req,res)=>{
     
     try {
-        const Product = await ProductModule.find({});
+        const Product = await ProductModule.find();
         res.status(200).json(Product);
     } catch (error) {
         console.log(error);

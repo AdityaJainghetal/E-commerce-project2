@@ -10,7 +10,7 @@ const cors = require("cors");
 app.use(cors());
 require('dotenv').config();
 app.use("/uploads", express.static("uploads"));
-mongoose.connect("mongodb+srv://adityajainghetal:1234@cluster0.b5i0n.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(()=>{
+mongoose.connect(process.env.DConnected).then(()=>{
     console.log("DB connected !!!");
 })
 
