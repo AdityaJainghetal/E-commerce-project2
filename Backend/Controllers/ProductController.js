@@ -1,5 +1,21 @@
 const ProductModule =require("../Module/productModule");
 
+const AllDisplay = async(req,res)=>{
+    
+    try {
+        const Product = await ProductModule.find({});
+        res.status(200).json(Product);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+
+
+
+
+
 const productDisplay = async(req,res)=>{
     const { productbrand } = req.query;
     try {
@@ -22,5 +38,6 @@ const productDataShow = async(req,res)=>{
 
 module.exports={
     productDisplay,
-    productDataShow
+    productDataShow,
+    AllDisplay
 }
