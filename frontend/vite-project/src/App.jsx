@@ -14,6 +14,7 @@ import Cart from './Cart'
 import Checkout from './Checkout'
 import Signup from './Regisration'
 import Login from './Login'
+import CustomerOrders from './Admin/CustomerOrders'
 const App = () => {
   return (
     <>
@@ -30,7 +31,8 @@ const App = () => {
         </Route>
 
       <Route>
-      <Route path='product' element={<Product/>}/>
+        
+      <Route path="product" element={<Product/>}/>
       <Route path="cart" element={<Cart/>}/>
       <Route path='checkout' element={<Checkout/>}/>
       <Route path="regsitation" element={<Signup/>}/>
@@ -42,10 +44,11 @@ const App = () => {
     <Routes>
       <Route path='/admin' element={<AdminHome/>}>
       <Route index element={<AdminLogin/>}/>
-      <Route path='adminDashboard' element={<AdminDashboard/>}/>
+      <Route path='adminDashboard' element={<AdminDashboard/>}>
+      <Route index element={<UploadProduct/>}/>
       <Route path='uploadproduct' element={<UploadProduct/>}/>
-      
-
+      <Route path="customerOrder" element={<CustomerOrders/>}/>
+      </Route>
       </Route>
 
 

@@ -1,6 +1,7 @@
 const AdminModule =require("../Module/AdminModule");
 const ProductModel = require("../Module/productModule")
-
+const orderModel = require("../Module/OrderModule");
+const OrderModule = require("../Module/OrderModule");
 const adminLogin = async (req, res)=>{
     const {adminuser, adminpassword} = req.body;
     try {
@@ -45,7 +46,10 @@ const productSave=async(req, res)=>{
 }
 
 
-
+const orderDetail = async(req,res)=>{
+    const Order = await OrderModule.find();
+    res.status(200).send(Order)
+}
 
 
 
@@ -55,5 +59,6 @@ const productSave=async(req, res)=>{
 
 module.exports= {
     adminLogin,
-    productSave
+    productSave,
+    orderDetail
 } 

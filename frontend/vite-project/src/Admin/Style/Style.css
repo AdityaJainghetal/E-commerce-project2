@@ -20,7 +20,8 @@
     width: 100%;
     padding: 20px;
     background-color: rgb(27, 32, 43);
-    color: white;
+    /* color: white; */
+    
     text-align: center;
     position: fixed;
     bottom: 0px;
@@ -74,6 +75,7 @@
 {
     width: 80%;
     padding: 20px;
+    margin-left: 300px;
 }
 
 .cart{
@@ -95,4 +97,144 @@
     border-radius: 10px;
     align-items: center;
     height: 500px;
+}
+
+#adminFooter{
+    position: fixed;
+    bottom: 0px;
+
+}
+
+
+
+
+
+
+/* AdminDashboard.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4; /* Light background for the body */
+}
+
+.dashboard-header {
+    background-color: rgb(27, 32, 43);/* Green background */
+  
+    color: white;
+    padding: 15px;
+    display: flex;
+   justify-content: center;
+    
+}
+
+.welcome-message {
+    font-size: 1.5em;
+    
+    
+    
+}
+
+
+
+.dashboard-container {
+    display: flex;
+    margin: 20px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #fff; /* White background for sidebar */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #4CAF50; /* Green color for links */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #45a049; /* Darker green on hover */
+}
+
+.main-content {
+    flex: 1;
+    background-color: #fff; /* White background for main content */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Space between sidebar and main content */
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column; /* Stack sidebar and content on smaller screens */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width for sidebar */
+        margin-bottom: 20px; /* Space below sidebar */
+    }
+
+    .main-content {
+        margin-left: 0; /* No margin on smaller screens */
+    }
+}
+
+/* AdminHome.css */
+
+body {
+    background-color: #f8f9fa; /* Light background for the body */
+}
+
+#adminFooter {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* AdminLogin.css */
+
+body {
+    background-color: #f8f9fa; /* Light background for the body */
+}
+
+#adminForm {
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+#adminForm {
+    width: 100%;
+    max-width: 400px; /* Max width for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h2 {
+    color: #333; /* Darker text for the title */
+}
+
+button {
+    transition: background-color 0.3s ease; /* Smooth transition for button */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }

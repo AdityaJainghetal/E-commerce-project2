@@ -51,8 +51,8 @@ const Banner = () => {
     </Carousel>
     
     
-    
-    <Container>
+    <div style={{width:"100%"}}>
+    <Container style={{backgroundColor:"lightblue",width:"100%" }}>
       <Row style={{display:"flex"}}>
         <Col xs={6} md={3}>
           <Image src={img4} roundedCircle  style={{height:"230px", width:"50%", cursor:"pointer"}} onClick={handleInput}  />
@@ -73,7 +73,7 @@ const Banner = () => {
         </Col>
       </Row>
     </Container>
-    
+    </div>
     
     
     </>

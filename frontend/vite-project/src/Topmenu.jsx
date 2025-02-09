@@ -45,7 +45,6 @@ const Topmenu = () => {
             <Nav.Link as={Link} to="login" style={{color:"white"}}>Login</Nav.Link>
           </Nav>
  
-          <Nav.Link as={Link} to="/cart"><FaCartShopping /> {productLength}</Nav.Link>
        
         <Col>
      
@@ -58,9 +57,12 @@ const Topmenu = () => {
           </>
         ): (
           <>
-          Welcome to : {username} email: {useremail}
-
-          <button onClick={userLogout}>Logout</button>
+          <div style={{display:"flex",justifyContent:"space-between",  paddingLeft:"40px"}}>
+          Welcome to : {username}   email: {useremail}
+          <div style={{display:"flex",justifyContent:"space-between",  paddingLeft:"40px"}}>
+          <button onClick={userLogout} style={{backgroundColor:"skyblue", borderRadius:"10px"}}> Logout </button>
+          </div>
+          </div>
           </>
         )}
        
@@ -74,6 +76,7 @@ const Topmenu = () => {
      
         
         
+        <Nav.Link as={Link} to="/cart"><FaCartShopping /> {productLength}</Nav.Link>
         </Container>
         
       </Navbar>

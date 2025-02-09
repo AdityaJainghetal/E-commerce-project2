@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
 
-    <MDBFooter className='text-center text-lg-start text-muted' style={{ backgroundColor: "darkblue", color: "white", fontSize: "18px", padding:"20px" ,height:"300px"}}>
+    <MDBFooter className='text-center text-lg-start text-muted' style={{ backgroundColor: "darkblue", color: "white", fontSize: "18px", padding:"20px"}}>
       <section style={{ color: "white"}}>
         <MDBContainer className='text-center text-md-start mt-5'>
           <MDBRow className='mt-3'>

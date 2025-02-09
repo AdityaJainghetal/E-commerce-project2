@@ -49,8 +49,9 @@ const handleInput=(e)=>{
 
     return(
         <>
-           <h1> Upload New Product</h1>
-           <Form style={{width:"500px"}}>
+           
+          
+           <Form style={{width:"500px", border:"2px solid black",padding:"30px" ,borderRadius:"10px",backgroundColor:"whitesmoke",textAlign:"center"}}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Product name </Form.Label>
         <Form.Control type="text" name="productname" value={input.productname} onChange={handleInput} />
@@ -91,6 +92,7 @@ const handleInput=(e)=>{
         Submit
       </Button>
     </Form>
+
         </>
     )
 }
