@@ -4,7 +4,6 @@ const productController = require("../Controllers/ProductController");
 
 route.get("/productdisplay", productController.productDisplay);
 route.post("/productdatashow", productController.productDataShow);
-route.post("/displaydata", productController.AllDisplay);
 
 
 

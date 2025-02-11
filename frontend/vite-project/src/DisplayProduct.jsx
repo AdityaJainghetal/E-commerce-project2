@@ -16,7 +16,7 @@ function DisplayProduct() {
   const navigate = useNavigate()
   const loadData = async () => {
     try {
-      let api = "http://localhost:8000/products/displaydata";
+      let api = "http://localhost:8000/products/productdisplay?productbrand=Mens";
       const response = await axios.get(api);
       console.log(response.data)
 
