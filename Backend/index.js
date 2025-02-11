@@ -57,7 +57,7 @@ app.use(express.json());
 app.use("/uploads", express.static("uploads"));
 
 // Database Connection
-mongoose.connect(process.env.DConnected, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.DConnected)
     .then(() => {
         console.log("DB connected successfully!");
     })
