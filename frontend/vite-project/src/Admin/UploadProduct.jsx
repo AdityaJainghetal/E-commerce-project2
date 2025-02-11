@@ -34,7 +34,7 @@ const handleInput=(e)=>{
 
 
     try {
-      let api="http://localhost:8000/admin/productsave";
+      let api="https://e-commerce-project2.onrender.com/admin/productsave";
       const response = await axios.post(api, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });

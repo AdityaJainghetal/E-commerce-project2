@@ -23,7 +23,7 @@ const Signup=()=>{
       e.preventDefault();
       try {
       
-        let api="http://localhost:8000/users/userregister";
+        let api="https://e-commerce-project2.onrender.com/users/userregister";
       const response= await axios.post(api, input);
       console.log(response.data);
       alert("Data save!!!");

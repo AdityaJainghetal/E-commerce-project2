@@ -16,7 +16,7 @@ function Mens() {
   const navigate = useNavigate()
   const loadData = async () => {
     try {
-      let api = "http://localhost:8000/products/productdisplay?productbrand=Mens";
+      let api = "https://e-commerce-project2.onrender.com/products/productdisplay?productbrand=Mens";
 
       const response = await axios.get(api);
       console.log(response.data)

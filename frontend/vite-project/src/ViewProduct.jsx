@@ -10,7 +10,7 @@ const ViewProduct = () => {
     const [bigImage, setBigImage] = useState("");
 
     const loadData = async () => {
-        let api = "http://localhost:8000/products/productdatashow";
+        let api = "https://e-commerce-project2.onrender.com/products/productdatashow";
         const response = await axios.post(api, { id: id });
         setPreData(response.data);
         setBigImage(response.data.defaultImage);
@@ -31,7 +31,7 @@ const ViewProduct = () => {
                 <Row className="justify-content-center">
                     <Col md={6} className="image-column">
                         <Card className="text-center m-3">
-                            <Card.Img variant="top" src={`http://localhost:8000/${bigImage}`} className="main-image" />
+                            <Card.Img variant="top" src={`https://e-commerce-project2.onrender.com/${bigImage}`} className="main-image" />
                             <div className="thumbnail-container">
                                 {proData.images && proData.images.length > 0 ? (
                                     proData.images.map((item, index) => (
@@ -39,7 +39,7 @@ const ViewProduct = () => {
                                             key={index} 
                                             className="thumbnail" 
                                             onClick={() => { myBigImage(item) }} 
-                                            src={`http://localhost:8000/${item}`} 
+                                            src={`https://e-commerce-project2.onrender.com/${item}`} 
                                             alt={`Thumbnail ${index}`} 
                                         />
                                     ))
