@@ -15,6 +15,7 @@ import Checkout from './Checkout'
 import Signup from './Regisration'
 import Login from './Login'
 import CustomerOrders from './Admin/CustomerOrders'
+import Kids from './kids'
 const App = () => {
   return (
     <>
@@ -25,6 +26,7 @@ const App = () => {
         <Route path='product' element={<Product/>}/>
         <Route path='mens' element={<Mens/>}/>
         <Route path='womens' element={<Womens/>}/>
+        <Route path='kids' element={<Kids/>}/>
         <Route path="viewProduct/:id" element={<ViewProduct />}/>  
         {/* <Route path="regsitation" element={<Signup/>}/>
         <Route path="login" element={<Login/>}/> */}

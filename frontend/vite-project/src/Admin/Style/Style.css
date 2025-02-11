@@ -238,3 +238,86 @@ button {
 button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
+
+
+
+
+
+
+
+.hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  h3 {
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+
+
+
+
+
+
+  .product-container {
+    background-color: whitesmoke;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-column {
+    display: flex;
+    justify-content: center;
+}
+
+.main-image {
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Smooth zoom effect */
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.thumbnail {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.thumbnail:hover {
+    transform: scale(1.1); /* Zoom in effect on hover */
+}
+
+.details-column {
+    padding-top: 30px;
+}
+
+.product-name {
+    font-weight: bold;
+}
+
+.product-price {
+    color: blue;
+}
+
+.add-to-cart-button {
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+.add-to-cart-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
