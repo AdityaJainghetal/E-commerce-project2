@@ -16,7 +16,7 @@ function Mens() {
   const navigate = useNavigate()
   const loadData = async () => {
     try {
-      let api = "https://e-commerce-project2.onrender.com/products/productdisplay?productbrand=Mens";
+      let api = "https://e-commerce-project2-1.onrender.com/products/productdisplay?productbrand=Mens";
 
       const response = await axios.get(api);
       console.log(response.data)
@@ -51,7 +51,7 @@ function Mens() {
 <Card style={{ width: '18rem' , backgroundColor:"skyblue",marginLeft:"50px" , cursor:"pointer", margin:"auto"}}>
       <Card.Img variant="top"
      onClick={()=>{proDisplay(item._id)}}
-        src={`http://localhost:8000/${item.defaultImage}`}
+        src={`https://e-commerce-project2-1.onrender.com/${item.defaultImage}`}
         style={{ height: "200px" }}/>
       
       <Card.Body>

@@ -21,7 +21,7 @@ const CheckOut = () => {
     }, [navigate]);
 
     const loadData = async () => {
-        const api = "https://e-commerce-project2.onrender.com/users/getuserdetail";
+        const api = "https://e-commerce-project2-1.onrender.com/users/getuserdetail";
         try {
             const response = await axios.post(api, { id: localStorage.getItem("userid") });
             setMydata(response.data);
@@ -38,11 +38,11 @@ const CheckOut = () => {
             currency: data.currency,
             name: productName,
             description: "Test",
-            image: `https://e-commerce-project2.onrender.com/${myimg}`,
+            image: `https://e-commerce-project2-1.onrender.com/${myimg}`,
             order_id: data.id,
             handler: async (response) => {
                 try {
-                    const verifyURL = "https://e-commerce-project2.onrender.com/api/payment/verify";
+                    const verifyURL = "https://e-commerce-project2-1.onrender.com/api/payment/verify";
                     await axios.post(verifyURL, response);
                     message.success("Payment successful!");
                 } catch (error) {
@@ -60,7 +60,7 @@ const CheckOut = () => {
 
     const handlePay = async () => {
         try {
-            const orderURL = "https://e-commerce-project2.onrender.com/api/payment/orders";
+            const orderURL = "https://e-commerce-project2-1.onrender.com/api/payment/orders";
             const { data } = await axios.post(orderURL, {
                 amount: totalAmount,
                 productname: productName,
@@ -92,7 +92,7 @@ const CheckOut = () => {
       
         <div id="checkout">
             <Card className="checkoutbtn">
-                <Card.Img style={{width:"50%", height:"50%", padding:"auto"}} variant="top" src={`https://e-commerce-project2.onrender.com/${myimg}`} />
+                <Card.Img style={{width:"50%", height:"50%", padding:"auto"}} variant="top" src={`https://e-commerce-project2-1.onrender.com/${myimg}`} />
                 <Card.Body>
                     <Card.Title>User CheckOut</Card.Title>
                     <Card.Text>
