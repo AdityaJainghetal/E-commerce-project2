@@ -7,7 +7,6 @@ import img1 from "./assets/img1.jpg";
 import img2 from "./assets/img2.jpg";
 import img3 from "./assets/img3.jpg";
 import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import img4 from "./assets/img4.jpg";

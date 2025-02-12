@@ -66,7 +66,7 @@ const Login = () => {
                 </Form>
                 <div className="mt-3 text-center">
                     <span>Don't have an account? </span>
-                    <span className="loginText" onClick={() => navigate("/register")} style={{ cursor: 'pointer', color: '#007bff' }}>
+                    <span className="loginText" onClick={() => navigate("/registration")} style={{ cursor: 'pointer', color: '#007bff' }}>
                         Register
                     </span>
                 </div>

@@ -51,7 +51,7 @@ const handleInput=(e)=>{
         <>
            
           
-           <Form style={{width:"500px", border:"2px solid black",padding:"30px" ,borderRadius:"10px",backgroundColor:"whitesmoke",textAlign:"center"}}>
+           <Form style={{width:"50%", border:"2px solid black",margin:"auto",padding:"30px" ,borderRadius:"10px",backgroundColor:"whitesmoke",textAlign:"center"}}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Product name </Form.Label>
         <Form.Control type="text" name="productname" value={input.productname} onChange={handleInput} />

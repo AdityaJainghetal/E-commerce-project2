@@ -4,22 +4,13 @@ import React from 'react';
 
 
 const AdminDashboard = () => {
-  const [adminuser, setAdminUser ] = useState("");
-
-  useEffect(() => {
-    setAdminUser (localStorage.getItem("adminid"));
-  }, []);
+  
 
 
 
   return (
     <>
-      <header className="dashboard-header">
-        <div className="welcome-message">
-          Welcome: {adminuser}
-        </div>
-  
-      </header>
+     
       <div className="dashboard-container">
         <nav className="sidebar">
           <ul>
