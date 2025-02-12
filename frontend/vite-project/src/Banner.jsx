@@ -33,40 +33,46 @@ const Banner = () => {
     navigate("/kids");
   };
 
+  const mobiles = () => {
+    navigate("/mobile")
+  }
+
   return (
     <>
       <Carousel>
         <Carousel.Item>
-          <img src={img1} alt="First slide" className="d-block w-100" style={{ height: "500px" }} />
+          <img src={img1} alt="First slide" className="d-block w-100" style={{ height: "550px" }} />
         </Carousel.Item>
         <Carousel.Item>
-          <img src={img2} alt="Second slide" className="d-block w-100" style={{ height: "500px" }} />
+          <img src={img2} alt="Second slide" className="d-block w-100" style={{ height: "550px" }} />
         </Carousel.Item>
         <Carousel.Item>
-          <img src={img3} alt="Third slide" className="d-block w-100" style={{ height: "500px" }} />
+          <img src={img3} alt="Third slide" className="d-block w-100" style={{ height: "550px" }} />
         </Carousel.Item>
       </Carousel>
 
-      <Container style={{ backgroundColor: "lightblue", padding: "20px" }}>
+      <div style={{ padding: "20px", borderRadius: "10px" }}>
+    <div id="box">
         <Row className="text-center">
           <Col xs={6} md={3}>
-            <Image src={img4} roundedCircle style={{ height: "230px", width: "50%", cursor: "pointer", transition: "transform 0.2s" }} onClick={handleInput} className="hover-effect" />
-            <h3>Mens</h3>
+            <Image src={img4} roundedCircle style={{ height: "250px", width: "50%", cursor: "pointer", transition: "transform 0.2s" }} onClick={handleInput} className="hover-effect" />
+            <h3 style={{ fontFamily: "sans-serif", fontWeight: "700", fontSize: "22px" }}>Mens</h3>
           </Col>
           <Col xs={6} md={3}>
-            <Image src={img5} roundedCircle style={{ height: "230px", width: "50%", cursor: "pointer", transition: "transform 0.2s" }} onClick={kids} className="hover-effect" />
-            <h3>Kids</h3>
+            <Image src={img5} roundedCircle style={{ height: "250px", width: "50%", cursor: "pointer", transition: "transform 0.2s" }} onClick={kids} className="hover-effect" />
+            <h3 style={{ fontFamily: "sans-serif", fontWeight: "700", fontSize: "22px" }}>Kids</h3>
           </Col>
           <Col xs={6} md={3}>
-            <Image src={img7} roundedCircle style={{ height: "230px", width: "50%", cursor: "pointer", transition: "transform 0.2s" }} onClick={handleInput2} className="hover-effect" />
-            <h3>Womens</h3>
+            <Image src={img7} roundedCircle style={{ height: "250px", width: "50%", cursor: "pointer", transition: "transform 0.2s" }} onClick={handleInput2} className="hover-effect" />
+            <h3 style={{ fontFamily: "sans-serif", fontWeight: "700", fontSize: "22px" }}>Womens</h3>
           </Col>
           <Col xs={6} md={3}>
-            <Image src={img9} roundedCircle style={{ height: "230px", width: "50%" }} />
-            <h3>Mobiles</h3>
+            <Image src={img9} roundedCircle style={{ height: "250px", width: "50%", cursor: "pointer", transition: "transform 0.2s" }} onClick={mobiles} className="hover-effect" />
+            <h3 style={{ fontFamily: "sans-serif", fontWeight: "700", fontSize: "22px" }}>Mobiles</h3>
           </Col>
         </Row>
-      </Container>
+      </div>
+      </div>
     </>
   );
 };

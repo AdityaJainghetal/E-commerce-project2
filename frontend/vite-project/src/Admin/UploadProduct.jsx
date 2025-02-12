@@ -63,6 +63,7 @@ const handleInput=(e)=>{
        <option value="Mens">Mens</option>
        <option value="Womens">Womens</option>
        <option value="Kids">Kids</option>
+       <option value="Mobile">Mobile</option>
     </Form.Select>
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicEmail">

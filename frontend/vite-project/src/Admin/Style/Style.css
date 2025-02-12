@@ -369,3 +369,88 @@ button:hover {
   .logout-btn:hover {
     background-color: #ff3333;
   }
+
+
+  
+
+
+
+
+  .hover-effect {
+    height: 230px;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 5px solid transparent; /* Add border for better visibility */
+  }
+  
+  .hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .category-title {
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+  }
+
+
+
+
+  /* Signup.css */
+.signup-container {
+    background-color: lightsteelblue ;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* max-width: 500px; */
+    margin: auto;
+    width: auto;
+   
+}
+
+
+.signup-form {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    
+}
+
+.signup-form .form-label {
+    font-weight: bold;
+}
+
+.signup-form .form-control {
+    border-radius: 5px;
+}
+
+.signup-form button {
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 768px) {
+    .signup-form {
+        background-color: whitesmoke;
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        
+    }
+
+}
+
+
+#box{
+    background: linear-gradient(135deg, #1c4b93, #418cef) !important;
+}
+
+

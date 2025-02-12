@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <>
      <Topmenu/>
-     <br />
+
      <Outlet/>
     <br />
     <Footer/>
