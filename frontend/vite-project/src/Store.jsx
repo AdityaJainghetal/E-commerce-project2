@@ -12,10 +12,10 @@ const persistedReducer = persistReducer(persistConfig, cardReducer);
 
 const store = configureStore({
     reducer: {
-        mycart: persistedReducer // Use the persisted reducer
+        mycart: persistedReducer
     }
 });
 
-export const persistor = persistStore(store); // Create the persistor
+export const persistor = persistStore(store);
 
-export default store; // Export the store
+export default store;

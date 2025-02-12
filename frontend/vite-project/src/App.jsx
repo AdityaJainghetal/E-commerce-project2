@@ -16,6 +16,7 @@ import Signup from './Regisration'
 import Login from './Login'
 import CustomerOrders from './Admin/CustomerOrders'
 import Kids from './kids'
+import Navbar from './Navbar'
 const App = () => {
   return (
     <>
@@ -28,22 +29,22 @@ const App = () => {
         <Route path='womens' element={<Womens/>}/>
         <Route path='kids' element={<Kids/>}/>
         <Route path="viewProduct/:id" element={<ViewProduct />}/>  
-        {/* <Route path="regsitation" element={<Signup/>}/>
-        <Route path="login" element={<Login/>}/> */}
-        </Route>
-
-      <Route>
         
+        </Route>
+       
+      <Route>
+      <Route path="/" element={<Navbar/>}>
       <Route path="product" element={<Product/>}/>
       <Route path="cart" element={<Cart/>}/>
       <Route path='checkout' element={<Checkout/>}/>
-      <Route path="regsitation" element={<Signup/>}/>
-        <Route path="login" element={<Login/>}/>
+      <Route path="registartion" element={<Signup/>}/>
+      <Route path="login" element={<Login/>}/>
+        </Route>
       </Route>
 
-    </Routes>
+  
 
-    <Routes>
+  
       <Route path='/admin' element={<AdminHome/>}>
       <Route index element={<AdminLogin/>}/>
       <Route path='adminDashboard' element={<AdminDashboard/>}>
@@ -54,11 +55,11 @@ const App = () => {
       </Route>
 
 
-    </Routes>
+  
     
     
     
-    
+      </Routes>
     
     </BrowserRouter>
     

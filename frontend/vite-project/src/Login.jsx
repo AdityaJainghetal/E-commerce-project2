@@ -17,7 +17,7 @@ const Login=()=>{
       e.preventDefault();
       try {
       
-        let api="https://e-commerce-project2-1.onrender.com/users/userlogin";
+        let api="http://localhost:8000/users/userlogin";
       const response= await axios.post(api, input);
       console.log(response.data);
       message.success("You are succesfully login!");
@@ -32,6 +32,7 @@ const Login=()=>{
     }
     return(
         <>
+        <div style={{border:"2px solid black", borderRadius:"10px", backgroundColor:"whitesmoke", width:"50%", textAlign:"center",margin:"auto"}}>
         <div style={{width:"500px", margin:"auto"}}>
           <h1> User Login</h1>
           <Form style={{width:"500px"}}>
@@ -48,6 +49,7 @@ const Login=()=>{
       </Button>
     </Form>
     <br/> <br/>
+    </div>
     </div>
         </>
     )

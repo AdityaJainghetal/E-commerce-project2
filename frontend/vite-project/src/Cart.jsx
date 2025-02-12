@@ -6,7 +6,6 @@ import { FaPlusCircle } from "react-icons/fa";
 import { FaMinusCircle } from "react-icons/fa";
 import { qntyIncrease, qntyDecrease, itemRemove } from './CardSlice';
 import { useNavigate } from 'react-router-dom';
-import Topmenu from './Topmenu'
 const Cart = () => {
  
   const Data=useSelector(state=>state.mycart.cart);
@@ -29,7 +28,7 @@ const Cart = () => {
       <>
         <tr>
           <td> 
-          <img src={`https://e-commerce-project2-1.onrender.com/${key.image}`}  style={{height:'60px'}}/>
+          <img src={`http://localhost:8000/${key.image}`}  style={{height:'60px'}}/>
           </td>
           <td> {key.name} </td>
           <td> {key.price} </td>
@@ -55,7 +54,7 @@ const Cart = () => {
   })
   return (
     <>
-    <Topmenu/>
+ 
   
     <div>
       <div style={{display: 'flex', justifyContent: 'space-between', padding: '10px'}}>
