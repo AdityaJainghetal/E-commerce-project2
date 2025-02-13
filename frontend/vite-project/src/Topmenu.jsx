@@ -69,6 +69,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { IoMdMenu } from "react-icons/io";
 import {
   Container,
   Nav,
@@ -108,10 +109,13 @@ const Topmenu = () => {
           <Navbar.Brand as={Link} to="/" className="navbar-brand">
             Dress Collection
           </Navbar.Brand>
-          <Navbar.Toggle
-            aria-controls="navbar-nav"
-            className="custom-toggler"
-          />
+          <Navbar.Toggle >
+          <IoMdMenu />
+          </Navbar.Toggle>
+        
+          
+           
+          
           <Navbar.Collapse id="navbar-nav">
             <Row className="w-100 align-items-center">
               {/* Left Section */}
@@ -133,7 +137,7 @@ const Topmenu = () => {
               <Col xs={12} md={4} className="text-center user-info">
                 {isLogin ? (
                   <p className="welcome-text">
-                    Welcome, <strong>{username}</strong>
+                    Welcome : <strong>{username}</strong>
                   </p>
                 ) : (
                   <p>Please login to access your account</p>

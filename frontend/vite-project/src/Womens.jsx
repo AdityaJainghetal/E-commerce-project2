@@ -6,7 +6,7 @@ import {useNavigate} from "react-router-dom"
 import {useDispatch} from "react-redux";
 import { addtoCart } from "./CardSlice";
 
-function Womens() {
+const Womens=()=> {
   const [products, setProducts] = useState([]);
   
 

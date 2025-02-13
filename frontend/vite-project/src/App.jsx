@@ -17,6 +17,7 @@ import Login from './Login'
 import CustomerOrders from './Admin/CustomerOrders'
 import Kids from './kids'
 import Navbar from './Navbar'
+import Mobile from './Mobile'
 const App = () => {
   return (
     <>
@@ -28,6 +29,7 @@ const App = () => {
         <Route path='mens' element={<Mens/>}/>
         <Route path='womens' element={<Womens/>}/>
         <Route path='kids' element={<Kids/>}/>
+        <Route path='mobile' element={<Mobile/>}/>
       
         <Route path="viewProduct/:id" element={<ViewProduct />}/>  
         

@@ -6,7 +6,7 @@ import {useNavigate} from "react-router-dom"
 import {useDispatch} from "react-redux";
 import { addtoCart } from "./CardSlice";
 
-function Mens() {
+const Mens=()=> {
   const [products, setProducts] = useState([]);
   
 
@@ -48,7 +48,7 @@ function Mens() {
     <>
 
 
-<Card style={{ width: '18rem' , backgroundColor:"skyblue",marginLeft:"50px" , cursor:"pointer", margin:"auto"}}>
+<Card style={{  width: '18rem' , backgroundColor:"skyblue", cursor:"pointer",margin:"auto", marginTop:"20px"}}>
       <Card.Img variant="top"
      onClick={()=>{proDisplay(item._id)}}
         src={`http://localhost:8000/${item.defaultImage}`}

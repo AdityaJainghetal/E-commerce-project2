@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 import { Button } from "react-bootstrap";
 import Card from 'react-bootstrap/Card';
-import Topmenu from './Topmenu'
 const CheckOut = () => {
     const [mydata, setMydata] = useState({});
     const navigate = useNavigate();
@@ -88,7 +87,7 @@ const CheckOut = () => {
 
     return (
         <>
-            <Topmenu/>
+            
       
         <div id="checkout">
             <Card className="checkoutbtn">
