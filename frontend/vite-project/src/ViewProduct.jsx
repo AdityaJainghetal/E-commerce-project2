@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from "axios";
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-
+import {useDispatch} from "react-redux";
+import { addtoCart } from "./CardSlice";
 
 const ViewProduct = () => {
     const { id } = useParams(); 
     const [proData, setPreData] = useState({});
     const [bigImage, setBigImage] = useState("");
 
+
+    const dispatch = useDispatch()
     const loadData = async () => {
         let api = "http://localhost:8000/products/productdatashow";
         const response = await axios.post(api, { id: id });
@@ -54,7 +57,11 @@ const ViewProduct = () => {
                         <h3 className="product-price">Price: ${proData.productprice}</h3>
                         <h4 className="product-category">Category: {proData.productcategory}</h4>
                         <h5 className="product-description">Description: {proData.productdescription}</h5>
-                        <Button variant="primary" className="add-to-cart-button">Add to Cart</Button>
+                      
+                         <Button variant="primary" className="add-to-cart-button"
+                                onClick={()=>{dispatch(addtoCart({id:proData._id,name:proData.productname,brand:proData.productbrand, category:proData.productcategory, price:proData.productprice, image:proData.defaultImage,qnty:1}))}}
+                                
+                                >Add to Cart</Button>
                     </Col>
                 </Row>
             </Container>

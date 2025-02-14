@@ -69,11 +69,22 @@ const handleInput=(e)=>{
       <Form.Group className="mb-3" controlId="formBasicEmail">
       <Form.Select aria-label="Default select example" name="productcategory" value={input.productcategory} onChange={handleInput}>
       <option>Open this select menu</option>
+      
       <option value="Shirt">Shirt</option>
        <option value="Pents">Pents</option>
        <option value="Jacket">Jacket</option>
+       <option value="Palazzo">palazzo</option>
+       <option value="Kurta">Long Kurta</option>
+       <option value="Blazer">Blazer</option>
+
+
+
        <option value="tshirt">tshirt</option>
        <option value="Lower">Lower</option>
+       <option value="Earphone">Earphone</option>
+       <option value="Android">Android</option>
+       <option value="IOS">IOS</option>
+       
     </Form.Select>
       </Form.Group>
 
