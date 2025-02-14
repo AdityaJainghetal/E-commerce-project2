@@ -28,7 +28,7 @@ const Cart = () => {
       <>
         <tr>
           <td> 
-          <img src={`http://localhost:8000/${key.image}`}  style={{height:'60px'}}/>
+          <img src={`https://e-commerce-project2.onrender.com/${key.image}`}  style={{height:'60px'}}/>
           </td>
           <td> {key.name} </td>
           <td> {key.price} </td>
