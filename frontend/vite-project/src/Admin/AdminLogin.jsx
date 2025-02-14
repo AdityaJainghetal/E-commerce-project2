@@ -16,7 +16,7 @@ const AdminLogin = () => {
         e.preventDefault();
         setLoading(true); // Set loading to true
         try {
-            let api = "https://e-commerce-project2.onrender.com/admin/adminlogin";
+            let api = "https://e-commerce-project2-1.onrender.com/admin/adminlogin";
             const response = await axios.post(api, { adminuser, adminpassword });
             if (response.status === 200) {
                 message.success("Login Successfully!");

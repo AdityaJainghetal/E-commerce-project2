@@ -16,7 +16,7 @@ const Mobile=()=> {
   const navigate = useNavigate()
   const loadData = async () => {
     try {
-      let api = "https://e-commerce-project2.onrender.com/products/productdisplay?productbrand=Mobile";
+      let api = "https://e-commerce-project2-1.onrender.com/products/productdisplay?productbrand=Mobile";
       const response = await axios.get(api);
       console.log(response.data)
 
@@ -50,7 +50,7 @@ const Mobile=()=> {
 <Card style={{ width: '18rem' , backgroundColor:"skyblue" , cursor:"pointer", margin:"auto", marginTop:"50px"}}>
       <Card.Img variant="top"
      onClick={()=>{proDisplay(item._id)}}
-        src={`https://e-commerce-project2.onrender.com/${item.defaultImage}`}
+        src={`https://e-commerce-project2-1.onrender.com/${item.defaultImage}`}
         style={{ height: "200px" }}/>
       
       <Card.Body>
