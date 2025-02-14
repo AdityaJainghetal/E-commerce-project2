@@ -76,6 +76,7 @@ const handleInput=(e)=>{
        <option value="Palazzo">palazzo</option>
        <option value="Kurta">Long Kurta</option>
        <option value="Blazer">Blazer</option>
+       
 
 
 
