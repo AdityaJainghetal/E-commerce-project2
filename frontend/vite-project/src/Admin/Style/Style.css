@@ -85,10 +85,11 @@
 }
 
 #checkout{
-    margin: "auto";
+    /* margin: "auto"; */
     width: 50%;
     /* height: 50%; */
-    margin-left: 400px;
+    /* margin-left: 400px; */
+    margin: auto;
     margin-top: 50px;
    
 }
@@ -97,6 +98,8 @@
     border-radius: 10px;
     align-items: center;
     height: 500px;
+    text-align: center;
+    
 }
 
 #adminFooter{
@@ -415,9 +418,10 @@ button:hover {
     background-color: whitesmoke;
     padding: 20px;
     border-radius: 10px;
-    width: 50%;
+    width: 40%;
     margin: auto;
     text-align: center;
+   
     
 }
 
@@ -446,11 +450,19 @@ button:hover {
         
     }
 
+    
+
+
+
 }
 
 
 #box{
     background: linear-gradient(135deg, #1c4b93, #418cef) !important;
+    height: "250px";
+    width: "50%";
+     cursor: "pointer";
+      transition: "transform 0.2s"
 }
 
 
@@ -467,4 +479,11 @@ button:hover {
 }
 .custom-toggler{
    background-color: white!important;
+}
+
+#login {
+    background-image: url("/frontend/vite-project/src/assets/background img.jpg"); /* Ensure this path is correct */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

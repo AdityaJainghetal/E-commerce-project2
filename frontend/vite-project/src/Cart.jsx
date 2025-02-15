@@ -85,7 +85,7 @@ const Cart = () => {
               <th></th>
               <th> </th>
               <th></th>
-              <th style={{fontWeight:"700"}}> {totalAmount} </th>
+              <th style={{fontWeight:"700"}}> ₹{totalAmount} </th>
               <th> </th>
           </tbody>
         </Table>

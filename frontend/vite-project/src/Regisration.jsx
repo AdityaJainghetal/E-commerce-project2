@@ -4,7 +4,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
-
+import backgroundImage from "../src/assets/background img 2.jpg"
 
 const Signup = () => {
     const [input, setInput] = useState({
@@ -38,10 +38,11 @@ const Signup = () => {
     };
 
     return (
-        <div className="signup-container">
-            
+        <div id="login" style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <div>
+                  
             <Form className="signup-form" onSubmit={handleSubmit}>
-            <h1 className="text-center mb-4" style={{backgroundColor:"darkblue", color:"white"}}>Registration</h1>
+            <h1 className="text-center mb-4" >Registration</h1>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Enter Name:</Form.Label>
                     <Form.Control
@@ -116,6 +117,7 @@ const Signup = () => {
                     Submit
                 </Button>
             </Form>
+        </div>
         </div>
     );
 };

@@ -54,7 +54,7 @@ const ViewProduct = () => {
                     </Col>
                     <Col md={6} className="details-column">
                         <h2 className="product-name">Product Name: {proData.productname}</h2>
-                        <h3 className="product-price">Price: ${proData.productprice}</h3>
+                        <h3 className="product-price">Price: ₹{proData.productprice}</h3>
                         <h4 className="product-category">Category: {proData.productcategory}</h4>
                         <h5 className="product-description">Description: {proData.productdescription}</h5>
                       

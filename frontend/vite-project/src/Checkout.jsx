@@ -20,7 +20,7 @@ const CheckOut = () => {
     }, [navigate]);
 
     const loadData = async () => {
-        const api = "https://e-commerce-project2-1.onrender.com/users/getuserdetail";
+        const api = "http://localhost:8000/users/getuserdetail";
         try {
             const response = await axios.post(api, { id: localStorage.getItem("userid") });
             setMydata(response.data);
@@ -37,11 +37,11 @@ const CheckOut = () => {
             currency: data.currency,
             name: productName,
             description: "Test",
-            image: `https://e-commerce-project2-1.onrender.com/${myimg}`,
+            image: `http://localhost:8000/${myimg}`,
             order_id: data.id,
             handler: async (response) => {
                 try {
-                    const verifyURL = "https://e-commerce-project2-1.onrender.com/api/payment/verify";
+                    const verifyURL = "http://localhost:8000/api/payment/verify";
                     await axios.post(verifyURL, response);
                     message.success("Payment successful!");
                 } catch (error) {
@@ -59,7 +59,7 @@ const CheckOut = () => {
 
     const handlePay = async () => {
         try {
-            const orderURL = "https://e-commerce-project2-1.onrender.com/api/payment/orders";
+            const orderURL = "http://localhost:8000/api/payment/orders";
             const { data } = await axios.post(orderURL, {
                 amount: totalAmount,
                 productname: productName,
@@ -91,17 +91,17 @@ const CheckOut = () => {
       
         <div id="checkout">
             <Card className="checkoutbtn">
-                <Card.Img style={{width:"50%", height:"50%", padding:"auto"}} variant="top" src={`https://e-commerce-project2-1.onrender.com/${myimg}`} />
+                <Card.Img style={{width:"50%", height:"50%", padding:"auto"}} variant="top" src={`http://localhost:8000/${myimg}`} />
                 <Card.Body>
                     <Card.Title>User CheckOut</Card.Title>
                     <Card.Text>
-                        Your Total Pay Amount: {totalAmount}
+                        Your Total Pay Amount: <input type="number"value={totalAmount}/>
                     </Card.Text>
                     <Card.Text>
-                        Your Shipping Address: {mydata.address}
+                        Your Shipping Address: <input type="text" value={mydata.address} />
                     </Card.Text>
                     <Card.Text>
-                        Your Products: {productName}
+                        Your Products: <input type="text"  value={productName} />
                     </Card.Text>
                     <Button variant="primary" onClick={handlePay}>Pay Now!</Button>
                 </Card.Body>

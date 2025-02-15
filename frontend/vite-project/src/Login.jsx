@@ -5,7 +5,7 @@ import axios from 'axios';
 import { message } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
-
+import backgroundImage from "../src/assets/background img.jpg"
 const Login = () => {
     const [input, setInput] = useState({ email: '', password: '' });
     const navigate = useNavigate();
@@ -31,7 +31,10 @@ const Login = () => {
     };
 
     return (
-        <div className="d-flex justify-content-center align-items-center vh-100" style={{ backgroundColor: "#f0f4f8" }}>
+        <div id="login" style={{ backgroundImage: `url(${backgroundImage})` }}>
+
+        <div className="d-flex justify-content-center align-items-center vh-100">
+            
             <div className="card col-12 col-lg-4 p-4 shadow rounded bg-white">
                 <h2 className="text-center mb-4">Login</h2>
                 <Form onSubmit={handleSubmit}>
@@ -71,6 +74,7 @@ const Login = () => {
                     </span>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

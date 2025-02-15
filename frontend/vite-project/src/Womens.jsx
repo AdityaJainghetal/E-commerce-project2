@@ -56,7 +56,7 @@ const Womens=()=> {
       <Card.Body>
         <Card.Title>{item.productname}</Card.Title>
         <Card.Text>
-        {item.productprice}
+        ₹{item.productprice}
         </Card.Text>
         <Button variant="primary"
         onClick={()=>{dispatch(addtoCart({id:item._id,name:item.productname,brand:item.productbrand, category:item.productcategory, price:item.productprice, image:item.defaultImage,qnty:1}))}}
