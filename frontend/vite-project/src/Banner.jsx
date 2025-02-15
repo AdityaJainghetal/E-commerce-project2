@@ -54,19 +54,19 @@ const Banner = () => {
     <div id="box">
         <Row className="text-center">
           <Col xs={6} md={3}>
-            <Image src={img4} roundedCircle style={{ height: "250px", width: "50%", cursor: "pointer", transition: "transform 0.2s" }} onClick={handleInput} className="hover-effect" />
+            <Image src={img4} roundedCircle style={{ height: "250px", width: "70%", cursor: "pointer", transition: "transform 0.2s" }} onClick={handleInput} className="hover-effect" />
             <h3 style={{ fontFamily: "sans-serif", fontWeight: "700", fontSize: "22px" }}>Mens</h3>
           </Col>
           <Col xs={6} md={3}>
-            <Image src={img5} roundedCircle style={{ height: "250px", width: "50%", cursor: "pointer", transition: "transform 0.2s" }} onClick={kids} className="hover-effect" />
+            <Image src={img5} roundedCircle style={{ height: "250px", width: "70%", cursor: "pointer", transition: "transform 0.2s" }} onClick={kids} className="hover-effect" />
             <h3 style={{ fontFamily: "sans-serif", fontWeight: "700", fontSize: "22px" }}>Kids</h3>
           </Col>
           <Col xs={6} md={3}>
-            <Image src={img7} roundedCircle style={{ height: "250px", width: "50%", cursor: "pointer", transition: "transform 0.2s" }} onClick={handleInput2} className="hover-effect" />
+            <Image src={img7} roundedCircle style={{ height: "250px", width: "70%", cursor: "pointer", transition: "transform 0.2s" }} onClick={handleInput2} className="hover-effect" />
             <h3 style={{ fontFamily: "sans-serif", fontWeight: "700", fontSize: "22px" }}>Womens</h3>
           </Col>
           <Col xs={6} md={3}>
-            <Image src={img9} roundedCircle style={{ height: "250px", width: "50%", cursor: "pointer", transition: "transform 0.2s" }} onClick={mobiles} className="hover-effect" />
+            <Image src={img9} roundedCircle style={{ height: "250px", width: "70%", cursor: "pointer", transition: "transform 0.2s" }} onClick={mobiles} className="hover-effect" />
             <h3 style={{ fontFamily: "sans-serif", fontWeight: "700", fontSize: "22px" }}>Mobiles</h3>
           </Col>
         </Row>
