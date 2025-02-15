@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 import axios from 'axios';
+import { message } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
 import backgroundImage from "../src/assets/background img 2.jpg"
@@ -29,7 +30,7 @@ const Signup = () => {
             const api = "https://e-commerce-project2-1.onrender.com/users/userregister";
             const response = await axios.post(api, input);
             console.log(response.data);
-            alert("Registration successful!");
+            message.success("Registration successful!");
             navigate("/login");
         } catch (error) {
             console.error(error);

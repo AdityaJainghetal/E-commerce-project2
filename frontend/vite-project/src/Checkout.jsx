@@ -55,6 +55,7 @@ const CheckOut = () => {
         };
         const rzp1 = new window.Razorpay(options);
         rzp1.open();
+        
     };
 
     const handlePay = async () => {
@@ -69,10 +70,14 @@ const CheckOut = () => {
                 id: mydata._id
             });
             initPay(data.data);
+
+
         } catch (error) {
             message.error("Failed to create payment order.");
             console.error(error);
         }
+        navigate("/")
+    
     };
 
     let totalAmount = 0;

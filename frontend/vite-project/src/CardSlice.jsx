@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import { message } from 'antd';
 const cartSlice= createSlice({
     name:"mycart",
 
@@ -13,7 +13,7 @@ const cartSlice= createSlice({
              
              if (Data.length>=1)
              {
-                alert("Product Aleready Added!!");
+                message.error("Product Aleready Added!!");
              }
              else
              {
@@ -43,7 +43,7 @@ const cartSlice= createSlice({
                 {
                     if (state.cart[i].qnty<=1)
                     {
-                        alert("Quantity not less than 1");
+                        message.error("Quantity not less than 1");
                     }
                     else 
                     {
