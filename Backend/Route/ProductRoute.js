@@ -6,5 +6,4 @@ route.get("/productdisplay", productController.productDisplay);
 route.post("/productdatashow", productController.productDataShow);
 
 
-
 module.exports =route;
