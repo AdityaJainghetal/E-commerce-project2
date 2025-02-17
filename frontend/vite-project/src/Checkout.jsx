@@ -4,117 +4,122 @@ import { message } from "antd";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { Button } from "react-bootstrap";
-import Card from 'react-bootstrap/Card';
-const CheckOut = () => {
-    const [mydata, setMydata] = useState({});
-    const navigate = useNavigate();
-    const Product = useSelector(state => state.mycart.cart);
-    
-    useEffect(() => {
-        if (!localStorage.getItem("username")) {
-            message.error("You are not logged in!");
-            navigate("/cart");
-        } else {
-            loadData();
+const CheckOut=()=>{
+     const [mydata, setMydata]= useState({});
+    const navigate= useNavigate();
+    const Product=useSelector(state=>state.mycart.cart);
+    console.log(Product);
+    useEffect(()=>{
+        if(!localStorage.getItem("username"))
+        {
+         message.error("You are not Loged in !")
+            navigate("/cart")
         }
-    }, [navigate]);
+        loadData();
+    }, [])
 
-    const loadData = async () => {
-        const api = "https://e-commerce-project2-2.onrender.com/users/getuserdetail";
-        try {
-            const response = await axios.post(api, { id: localStorage.getItem("userid") });
-            setMydata(response.data);
-        } catch (error) {
-            message.error("Failed to load user data.");
-            console.error(error);
-        }
-    };
+  const loadData=async()=>{
+    let api="https://e-commerce-project2-2.onrender.com/users/getuserdetail";
+    try {
+         const response= await axios.post(api, {id:localStorage.getItem("userid")});
+         setMydata(response.data);
+         console.log(response.data);
+    } catch (error) {
+         console.log(error);
+    }
+  }
 
-    const initPay = (data) => {
-        const options = {
-            key: "rzp_test_o3vkPO5n8pMXdo",
-            amount: data.amount,
-            currency: data.currency,
-            name: productName,
-            description: "Test",
-            image: `https://e-commerce-project2-2.onrender.com/${myimg}`,
-            order_id: data.id,
-            handler: async (response) => {
-                try {
-                    const verifyURL = "https://e-commerce-project2-2.onrender.com/api/payment/verify";
-                    await axios.post(verifyURL, response);
-                    message.success("Payment successful!");
-                    navigate("/"); // Navigate after successful payment.
-                } catch (error) {
-                    message.error("Payment verification failed.");
-                    console.error(error);
-                }
-            },
-            
-            theme: {
-                color: "#3399cc",
-            },
-        };
-        const rzp1 = new window.Razorpay(options);
-        rzp1.open();
-        
-    };
 
-    const handlePay = async () => {
-        try {
-            const orderURL = "https://e-commerce-project2-2.onrender.com/api/payment/orders";
-            const { data } = await axios.post(orderURL, {
-                amount: totalAmount,
-                productname: productName,
-                customername: mydata.name,
-                address: mydata.address,
-                email: mydata.email,
-                id: mydata._id
-            });
-            initPay(data.data); // This opens the checkout popup.
-            // Do NOT navigate here—wait for the payment handler to complete.
-        } catch (error) {
-            message.error("Failed to create payment order.");
-            console.error(error);
-        }
-        // Remove navigate("/") from here.
-    };
-    
 
-    let totalAmount = 0;
-    let productName = "";
-    let myimg = "";
 
-    Product.forEach((item) => {
-        totalAmount += item.price * item.qnty;
-        productName += item.name + ",";
-        myimg = item.image;
-    });
+//   const [shoe,setShoe] = useState({
+//     name: "Training Shoes",
+//     creator: "Nike",
+//     img: "https://images.pexels.com/photos/3490360/pexels-photo-3490360.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+//     price: 500,
+// });
 
-    return (
-        <>
-            
-      
-        <div id="checkout">
-            <Card className="checkoutbtn">
-                <Card.Img style={{width:"50%", height:"50%", padding:"auto"}} variant="top" src={`https://e-commerce-project2-2.onrender.com/${myimg}`} />
-                <Card.Body>
-                    <Card.Title>User CheckOut</Card.Title>
-                    <Card.Text>
-                        Your Total Pay Amount: <input type="number"value={totalAmount}/>
-                    </Card.Text>
-                    <Card.Text>
-                        Your Shipping Address: <input type="text" value={mydata.address} />
-                    </Card.Text>
-                    <Card.Text>
-                        Your Products: <input type="text"  value={productName} />
-                    </Card.Text>
-                    <Button variant="primary" onClick={handlePay}>Pay Now!</Button>
-                </Card.Body>
-            </Card>
-        </div>
-        </>
-    );
+const initPay = (data) => {
+  const options = {
+    key : "rzp_test_o3vkPO5n8pMXdo",
+    amount: data.amount,
+    currency: data.currency,
+    name: productName,
+    description: "Test",
+    image: `https://e-commerce-project2-2.onrender.com/${myimg}`,
+    order_id: data.id,
+    handler: async (response) => {
+      try {
+        const verifyURL = "https://e-commerce-project2-2.onrender.com/api/payment/verify";
+        const {data} = await axios.post(verifyURL,response);
+      } catch(error) {
+        console.log(error);
+      }
+    },
+    theme: {
+      color: "#3399cc",
+    },
+  };
+  const rzp1 = new window.Razorpay(options);
+  rzp1.open();
 };
+
+const handlePay = async () => {
+  try {
+    const orderURL = "https://e-commerce-project2-2.onrender.com/api/payment/orders";
+    const {data} = await axios.post(orderURL,{amount: totalAmount, productname:productName, customername:mydata.name, address:mydata.address, email:mydata.email, id:mydata._id});
+    console.log(data);
+    initPay(data.data); 
+  } catch (error) { 
+
+    console.log(error);
+  }
+};
+
+
+
+
+
+
+
+
+    
+    
+let totalAmount=0;
+let productName="";
+let myimg="";
+const ans=Product.map((key)=>{
+        totalAmount+=key.price*key.qnty;
+        productName+=key.name+",";
+        myimg=key.image;
+        return(
+            <>
+               <h3> {}  </h3>
+            </>
+          )
+    })
+
+
+    return(
+        <>
+          <h1 align="center"> User CheckOut</h1>
+
+         <h2 align="center">Your Total Pay Amount : {totalAmount} </h2>
+         <h4 align="center"> Your Shipping Address :{mydata.address} </h4>
+         <h4 align="center"> Your Products : {productName} </h4>
+         <br /> <br />
+ 
+    <center>
+    <Button variant="primary" onClick={handlePay}> Pay Now!</Button>
+    </center>
+        
+        <br/> <br/>
+
+
+
+
+        </>
+    )
+}
 
 export default CheckOut;
