@@ -27,7 +27,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const api = "https://e-commerce-project2-2.onrender.com/users/userregister";
+            const api = "https://e-commerce-project2-1.onrender.com/users/userregister";
             const response = await axios.post(api, input);
             console.log(response.data);
             message.success("Registration successful!");

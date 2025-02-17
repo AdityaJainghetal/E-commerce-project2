@@ -58,14 +58,14 @@ router.post("/orders",async(req,res) => {
 // Verifying the payment
 router.post("/verify", async (req, res) => {
     try {
-        // Using underscore naming as provided by Razorpay
-        const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
+        const { razorpay_orderID, razorpay_paymentID, razorpay_signature } = req.body;
 
-        if (!razorpay_order_id || !razorpay_payment_id || !razorpay_signature) {
+        // Validate the request body
+        if (!razorpay_orderID || !razorpay_paymentID || !razorpay_signature) {
             return res.status(400).json({ message: "Missing required fields!" });
         }
 
-        const sign = razorpay_order_id + "|" + razorpay_payment_id;
+        const sign = razorpay_orderID + "|" + razorpay_paymentID;
         const resultSign = crypto
             .createHmac("sha256", process.env.KEY_SECRET)
             .update(sign.toString())
@@ -80,6 +80,6 @@ router.post("/verify", async (req, res) => {
         console.error("Error in /verify:", error);
         res.status(500).json({ message: "Internal Server Error!" });
     }
-});
+})
 
-module.exports = router
+module.exports = router;
