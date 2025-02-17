@@ -44,11 +44,13 @@ const CheckOut = () => {
                     const verifyURL = "https://e-commerce-project2-1.onrender.com/api/payment/verify";
                     await axios.post(verifyURL, response);
                     message.success("Payment successful!");
+                    navigate("/"); // Navigate after successful payment.
                 } catch (error) {
-                    // message.error("Payment verification failed.");
+                    message.error("Payment verification failed.");
                     console.error(error);
                 }
             },
+            
             theme: {
                 color: "#3399cc",
             },
@@ -69,16 +71,15 @@ const CheckOut = () => {
                 email: mydata.email,
                 id: mydata._id
             });
-            initPay(data.data);
-
-
+            initPay(data.data); // This opens the checkout popup.
+            // Do NOT navigate here—wait for the payment handler to complete.
         } catch (error) {
             message.error("Failed to create payment order.");
             console.error(error);
         }
-        navigate("/")
-    
+        // Remove navigate("/") from here.
     };
+    
 
     let totalAmount = 0;
     let productName = "";
