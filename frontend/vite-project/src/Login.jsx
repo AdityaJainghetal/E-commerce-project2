@@ -18,7 +18,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const api = "https://e-commerce-project2-1.onrender.com/users/userlogin";
+            const api = "https://e-commerce-project2-2.onrender.com/users/userlogin";
             const response = await axios.post(api, input);
             message.success("You are successfully logged in!");
             localStorage.setItem("username", response.data.name);

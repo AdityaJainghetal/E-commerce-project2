@@ -10,7 +10,7 @@ const CustomerOrders = () => {
 
   const loadData =async()=>{
     try {
-        let api= "https://e-commerce-project2-1.onrender.com/admin/orderdetail"
+        let api= "https://e-commerce-project2-2.onrender.com/admin/orderdetail"
         const response =  await axios.get(api);
         setMydata(response.data)
     
